@@ -1,0 +1,23 @@
+{
+  "name": "pharamcy_managment_system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "python app.py",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pateleklavya4-maker/Pharamcy_managment_system.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/pateleklavya4-maker/Pharamcy_managment_system/issues"
+  },
+  "homepage": "https://github.com/pateleklavya4-maker/Pharamcy_managment_system#readme"
+}
