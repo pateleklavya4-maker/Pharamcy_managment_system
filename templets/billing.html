@@ -7,15 +7,38 @@
 </head>
 <body class="bg-light">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="/">💊 MediCare Pharmacy</a>
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="/">Search & Stock</a>
-                <a class="nav-link" href="/expiry">Expiry Tracker</a>
-                <a class="nav-link active" href="/billing">POS Billing</a>
-            </div>
+    <div class="container">
+        <!-- Brand / Logo (Takes you back to Home/Index) -->
+        <a class="navbar-brand fw-bold" href="{{ url_for('index') }}">💊 MediCare Pharmacy</a>
+        
+        <!-- Navbar Links -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <!-- Link 1: Search & Stock (Index Page) -->
+                <li class="nav-item">
+                    <a class="nav-link {% if request.endpoint == 'index' %}active fw-bold{% endif %}" 
+                       href="{{ url_for('index') }}">Search & Stock</a>
+                </li>
+                
+                <!-- Link 2: Expiry Tracker Page -->
+                <li class="nav-item">
+                    <a class="nav-link {% if request.endpoint == 'expiry_tracker' %}active fw-bold{% endif %}" 
+                       href="{{ url_for('expiry_tracker') }}">Expiry Tracker</a>
+                </li>
+                
+                <!-- Link 3: POS Billing Page -->
+                <li class="nav-item">
+                    <a class="nav-link {% if request.endpoint == 'billing' %}active fw-bold{% endif %}" 
+                       href="{{ url_for('billing') }}">POS Billing</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <div class="container my-4">
         <div class="row">
